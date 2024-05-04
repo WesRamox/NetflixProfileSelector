@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    /* border: solid red 1px; */
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100vw;
+    background-color: #141414;
+    color: white;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 100vh;
+    gap: 10px;
+}
+
+.logo {
+    width: 200px;
+    padding: 25px 0px 10px 0px;
+}
+
+#profile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#profile-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    border: solid rgb(176, 176, 176) 2px;
+    transition: all 0.5s ease-out;
+}
+
+#profile-list li img {
+    width: 100%;
+}
+
+#profile-list li + #profile-name {
+    transition: all 0.5s ease;
+    opacity: 0;
+    cursor: default;
+}
+
+#profile-list li:hover + #profile-name {
+    opacity: 1;
+    transform: scale(1.2);
+    margin-left: 170px;
+    transition: all 0.5s ease;
+    cursor: default;
+}
+
+#profile-list li:hover {
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+    border: solid rgb(252, 252, 252) 2px;
+}
+
+.chooseProfile {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.newProfile {
+    font-size: 50px;
+}
+
+.boxUser {
+    display: flex;
+    align-items: center;
+}
+
+.boxUser p {
+    font-size: 25px;
+    margin-left: 150px;
+    position: absolute;
+}
