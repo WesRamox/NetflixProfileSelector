@@ -15,20 +15,12 @@ ul {
 .container {
     width: 100vw;
     color: white;
-    background-color: black;
     background-image: linear-gradient(
-    220deg,
-    transparent 0%,
-    transparent  5%,
-    transparent  5%,
-    transparent  10%,
-    transparent  44%,
-    transparent  55%,
-    transparent  66%,
-    hsla(354, 100%, 48%, 0.487) 90%,
-    hsla(0, 86%, 45%, 0.596) 100%,
-    hsla(0, 100%, 50%, 0.409) 100%
-    );
+        70deg,
+        hsla(0, 100%, 43%, 0.686) 0%,
+        hsl(0, 0%, 0%) 20%,
+        transparent 100%
+      );
 }
 
 .profiles {
@@ -49,14 +41,15 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    margin-bottom: 15px;
 }
 
 #profile-list li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     cursor: pointer;
     border: solid rgb(176, 176, 176) 2px;
     transition: all 0.5s ease-out;
@@ -91,8 +84,26 @@ ul {
     margin-bottom: 15px;
 }
 
-.newProfile {
+#newProfile {
     font-size: 50px;
+}
+
+.newProfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    border: solid rgb(176, 176, 176) 2px;
+    transition: all 0.5s ease-out;
+    list-style: none;
+}
+
+#newProfile li:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    border: solid rgb(252, 252, 252) 2px;
 }
 
 .boxUser {
@@ -104,4 +115,19 @@ ul {
     font-size: 25px;
     margin-left: 150px;
     position: absolute;
+}
+
+#myVideo {
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(50%);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: scale(1.1);
+    display: block;
+    margin: auto;
 }
