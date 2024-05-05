@@ -1,3 +1,23 @@
+let bodyBg = document.getElementById("main")
+
+const backgrounds = [
+    "./public/images/berlim.jpeg",
+    "./public/images/wandinha.jpg"
+]
+
+let counter = 0
+
+setInterval(
+	()=> {
+		counter++
+		if (counter == backgrounds.length) {
+			counter = 0
+		}
+
+		bodyBg.style.backgroundImage = `url('${backgrounds[counter]}')`;
+	}, 10000
+)
+
 function newProfile() {
     const ulProfiles = document.getElementById("profile-list")
     const itemsLi = document.getElementsByClassName("boxUser")
@@ -16,3 +36,4 @@ function newProfile() {
         ulProfiles.appendChild(newUser)           
     }
 }
+

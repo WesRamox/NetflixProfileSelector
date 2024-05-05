@@ -6,10 +6,22 @@
     <title>Netflix</title>
     <link rel="stylesheet" href="./public/styles/main.css">
 </head>
-<body>
-    <video autoplay muted loop id="myVideo">
-        <source src="./public/images/videoplayback.mp4" type="video/mp4">
-      </video>      
+<body id="main">
+    <section id="createProfile">
+        <div id="box-modal">
+            <h1>Criar novo perfil</h1>
+            <div id="user-details">
+                <div class="user-image new-user">
+                    <img src="./public/images/profileDefault.png" alt="">
+                </div>
+                <div class="details">
+                    <label for="name">Profile name</label>
+                    <input type="text" placeholder="Ex: Wesley">
+                </div>
+            </div>
+            <button class="submit">+</button>
+        </div>
+    </section>   
     <div class="container">
         <div class="profiles">
             <img src="./public/images/logo.png" alt="Netflix" class="logo">
