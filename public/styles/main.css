@@ -34,12 +34,13 @@ textarea:focus, input:focus{
     color: white;
     background-image: linear-gradient(
         50deg,
-        hsla(0, 100%, 60%, 0.887) 0%,
+        hsla(0, 0%, 3%, 0.887) 0%,
+        hsl(0, 0%, 0%) 30%,
         hsl(0, 0%, 0%) 30%,
         transparent 100%
       );
     height: 100%;
-    display: none;
+    /* display: none; */
 }
 
 .profiles {
@@ -248,4 +249,8 @@ textarea:focus, input:focus{
 .details {
     display: flex;
     flex-direction: column;
+}
+
+.hidden {
+    display: none !important;
 }

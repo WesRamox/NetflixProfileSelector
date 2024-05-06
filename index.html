@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./public/styles/main.css">
 </head>
 <body id="main">
-    <section id="createProfile">
+    <section id="createProfile" class="hidden">
         <div id="box-modal">
             <h1>Criar novo perfil</h1>
             <div id="user-details">
@@ -16,10 +16,10 @@
                 </div>
                 <div class="details">
                     <label for="name">Profile name</label>
-                    <input type="text" placeholder="Ex: Wesley">
+                    <input type="text" placeholder="Ex: Wesley" id="user-name">
                 </div>
             </div>
-            <button class="submit">+</button>
+            <button class="submit" onclick="newProfile()">+</button>
         </div>
     </section>   
     <div class="container">
@@ -35,7 +35,7 @@
                 </div>
             </ul>
             <div id="newProfile">
-                <li class="newProfile" onclick="newProfile()">
+                <li class="newProfile" onclick="modalNewUser()">
                     +
                 </li>
             </div>
