@@ -9,7 +9,7 @@
 <body id="main">
     <section id="createProfile" class="hidden">
         <div id="box-modal">
-            <h1>Criar novo perfil</h1>
+            <h1>Create new profile</h1>
             <div id="user-details">
                 <div class="user-image new-user">
                     <img src="./public/images/profileDefault.png" alt="">
@@ -18,6 +18,9 @@
                     <label for="name">Profile name</label>
                     <input type="text" placeholder="Ex: Wesley" id="user-name">
                 </div>
+            </div>
+            <div class="error">
+                <p>Please enter a name for the profile</p>
             </div>
             <button class="submit" onclick="newProfile()">+</button>
         </div>

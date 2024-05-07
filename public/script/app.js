@@ -23,36 +23,41 @@ function newProfile() {
     const ulProfiles = document.getElementById("profile-list")
     const itemsLi = document.getElementsByClassName("boxUser")
     const inputName = document.getElementById("user-name")
+    const errorDisplay = document.querySelector(".error")
     
-    if(itemsLi.length < 4) {
-        let newUser = document.createElement("div")
-        newUser.className = "boxUser"
-        
-        newUser.innerHTML = `
-        <li>
-        <img src="./public/images/profileDefault.png" alt="Profile Image" id="profileImg">
-        </li>
-        <p id="profile-name">${inputName.value}</p>
-        `
-        
-        ulProfiles.appendChild(newUser)  
-        inputName.value = ""         
+    if(!inputName.value == "") {
+        if(itemsLi.length < 4) {
+            let newUser = document.createElement("div")
+            newUser.className = "boxUser"
+            
+            newUser.innerHTML = `
+            <li>
+            <img src="./public/images/profileDefault.png" alt="Profile Image" id="profileImg">
+            </li>
+            <p id="profile-name">${inputName.value}</p>
+            `
+            
+            ulProfiles.appendChild(newUser)  
+            inputName.value = ""         
+        }
+        modalNewUser()
+        errorDisplay.style.display = "none"
+    } else {
+        errorDisplay.style.display = "flex"
     }
-    modalNewUser()
 }
 
 function modalNewUser() {
     const sectionModal = document.getElementById("createProfile")
     const container = document.querySelector(".container")
+    const userDetails = document.getElementById("box-modal")
     
     if(container.classList.contains("hidden")) {
-        container.classList.remove("hidden")
-        sectionModal.classList.add("hidden")
+        container.classList.toggle("hidden")
+        sectionModal.classList.toggle("hidden")
     } else {
-        sectionModal.classList.remove("hidden")
-        container.classList.add("hidden")
-    }
-    
+        sectionModal.classList.toggle("hidden")
+        container.classList.toggle("hidden")
+        userDetails.classList.toggle("active")
+    }   
 }
-
-loadData()
