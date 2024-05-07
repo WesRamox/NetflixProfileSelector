@@ -5,7 +5,7 @@ Uma cópia da pagina de perfis da Netflix versão TV BOX
 ![Adicionar novo Perfil](https://snipboard.io/hI9JZ5.jpg)
 
 
-- [Veja aqui](https://wesramox.github.io/NetflixProfileSelector/){:target="_blank" rel="noopener"}
+- [Veja aqui](https://wesramox.github.io/NetflixProfileSelector/)
 
 ### Tecnologias utilizadas
 
